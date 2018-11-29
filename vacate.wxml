@@ -1,0 +1,92 @@
+  <view class="wrap">
+    <view class="type flex mar10">
+      <view>请假类型</view>
+      <view class="section">
+        <picker name="Date" value="{{ index }}" range="{{ TypeArray }}" bindchange="bindTypeChange">
+          <view class="picker">
+            <text>{{ V_type }} </text>{{ TypeArray[index] }}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="start_time flex bor_bottom">
+      <view>开始时间</view>
+      
+        <view class="section ">
+          <picker name="V_start_day" mode="date" value="{{ date }}" start="2018-10-30" bindchange='start_time'>
+            <view class="picker">
+              <text>{{ V_start }}</text>{{ date1 }}
+            </view>
+          </picker>
+          <picker name="V_start_time" bindchange="bindPickerChange3" value="{{indextime}}" range="{{array}}">
+            <view class="picker">
+             <text>{{V_start_day}}</text>{{array[indextime]}}
+            </view>
+          </picker>
+        </view>
+    </view>
+    <view class="end_time flex bor_bottom">
+      <view>结束时间</view>
+      <view class="section">
+        <picker name="V_end_day" mode="date" value="{{ date }}" start="2018-10-30" bindchange="V_end">
+          <view class="picker">
+            <text>{{ V_end }}</text>{{ date2 }}
+          </view>
+        </picker>
+        <picker name="V_end_time" bindchange="bindPickerChange4" value="{{indexend}}" range="{{array1}}">
+            <view class="picker">
+              <text>{{V_end_day}}</text>{{array1[indexend]}}
+            </view>
+          </picker>
+      </view>
+    </view>
+    <!-- <view class="time flex">
+      <view>时长(天)</view>
+      <view class="time_inp">
+        <input name="day" placeholder='请输入时长'></input>
+      </view>
+    </view> -->
+    <view class="day flex mar10">
+      <view>请假天数</view>
+      <view class="time_inp">
+        <text>{{ day }}天</text>
+      </view>
+    </view>
+    <view class="reason flex mar10">
+      <view>请假事由</view>
+      <view class="time_inp">
+        <input name="test_reason" bindinput='reasonChange' placeholder='病假需提供医院证明'></input>
+      </view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-cells">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <view class="weui-uploader">
+                <view class="weui-uploader__hd">
+                  <view class="weui-uploader__title">图片附件上传</view>
+                  <view class="weui-uploader__info">{{files.length}}</view>
+                </view>
+                <view class="weui-uploader__bd">
+                  <view class="weui-uploader__files" id="uploaderFiles">
+                    <block wx:for="{{files}}" wx:key="*this">
+                      <view class="weui-uploader__file" style='position:relative'  id="{{item}}">
+                        <image class='del-img' bindtap='delImage' data-currentImg='{{item}}' src='/images/del.png'></image>
+
+                        <image class="weui-uploader__img" bindtap="previewImage" src="{{item}}" mode="aspectFill" />
+                      </view>
+                    </block>
+                  </view>
+                  <view class="weui-uploader__input-box">
+                    <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+<view class='bottom-btn-view flex-row'>
+  <button class='flex-1 bottom-btn' bindtap='finalSub'>提交</button>
+</view>
+  </view>

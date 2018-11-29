@@ -1,0 +1,94 @@
+.flex{
+  display:flex;
+  justify-content: space-between;
+  height:50px;
+  padding:0 13px;
+  background-color:white;
+  line-height:50px;
+}
+.type{
+  height:48px;
+  padding:1px 13px;
+}
+input{
+  text-align:right;
+  height:50px;
+  border:none;
+  line-height:50px;
+}
+picker{
+  display:inline-block;
+  margin-left:5px;
+}
+picker text{
+  color:gray;
+}
+
+.mar10{
+  margin:10px 0;
+}
+.bor_bottom{
+  border-bottom:1px solid #eee;
+}
+.pic{
+  padding:0  13px 13px 13px;
+  background-color:white;
+}
+.add_pic{
+  padding-top:13px;
+}
+.img{
+  background-color:white;
+  padding:0 13px;
+}
+.add{
+  display:inline-block;
+  width:78px;
+  height:78px;
+  margin-top:-2px;
+  border:1px solid #999;
+  font-size:50px;
+  color:#999;
+  text-align:center;
+  line-height:80px;
+  vertical-align: top;
+}
+.img1{
+  width:80px;
+  height:80px;
+  margin-right:10px;
+}
+.posi{
+  display:inline-block;
+  position:relative;
+  vertical-align: middle;
+  
+}
+.icon{
+  display:block;
+  width:20px;
+  height:20px;
+  margin:0 auto;
+  bottom:-20px;
+  
+} 
+button{
+  display:block;
+  bottom:0;
+  background-color:#3c8df9;
+  color:white;
+  
+}
+.weui-uploader__hd{
+  height:40px;
+  background-color:white;
+  line-height:40px;
+}
+
+/* .weui-uploader__input-box{
+  margin:0 13px;
+} */
+.weui-uploader__bd{
+  padding-bottom:50px;
+  background-color:white;
+}
