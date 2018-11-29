@@ -318,23 +318,15 @@ Page({
       })
       return;
     }
+    //输入请求地址
     api.fetch({
-      url: 'rest/work/doLeave',
+      url: '输入请求地址',
       data: {
-        userId: that.data.user.userId,
-        photoFiles: that.data.photoFiles,
-        type: parseInt(index) + 1,
-        beginLeave: date1 + ' ' + (indextime == 0 ? '上午' : '下午'),
-        endLeave: date2 + ' ' + (indexend == 0 ? '上午' : '下午'),
-        leaveDays: day,
-        leaveReason: reason
+        //数据
       },
       callback: (err, result) => {
-        console.log(result)
         if (result.success) {
-          wx.navigateBack({
-            url: '/pages/launch/index'
-          })
+          //成功之后的执行体
         } else {
           wx.showToast({
             title: result.msg,
